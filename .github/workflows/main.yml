@@ -31,7 +31,7 @@ jobs:
       
       # Setup do Node.JS
       - name: Configurar Node.js environment
-        uses: actions/setup-node@v2.1.1
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node-version }}
       
@@ -46,11 +46,11 @@ jobs:
       
       # publicar relatorio em html
       - name: Deploy to GithubPages
-        uses: JamesIves/github-pages-deploy-action@3.539
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             BRANCH: gh-pages
-            FOLDER: cypress/reports
+            FOLDER: mochawesome-report
           
       
       
